@@ -1,0 +1,37 @@
+---
+import 'colors.css';
+---
+
+html {
+  font-family: system-ui;
+  color: var(--main-text-color);
+  padding: 20px 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--back);
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+}
+a:link {
+  color: var(--main-text-color);
+}
+a:visited {
+  color: var(--main-text-color);
+}
+
+hr {
+  color: var(--main-text-color);
+}

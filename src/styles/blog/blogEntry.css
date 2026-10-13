@@ -1,0 +1,26 @@
+.item-1 {
+  display: flex;
+  width: 40%;
+  padding: 5px;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  margin-top: 20px;
+}
+
+.content {
+  display: flex;
+  width: 40%;
+  padding-right: 5px;
+  margin-left: 2%;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.thumb {
+  display: flex;
+  width: 40%;
+  justify-content: right;
+  margin-left: auto;
+}

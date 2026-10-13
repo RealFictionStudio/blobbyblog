@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import '../styles/headerTiny.css';
+import BlogLogo from '../assets/blog_white.png';
+---
+
+<div class="container">
+	<div class="title">
+		<a href="/"><Image src={BlogLogo} alt="BlobbyBlog logo" style="height: 100%; width: auto"/></a>
+</div>
+	<div class="header">
+		  <div class="header-item">
+			  <a href="/about" target="">About</a>
+		  </div>
+		  <div class="header-item">
+			  <a href="/work" target="">Work</a>
+		  </div>
+		  <div class="header-item">
+			  <a href="/blog" target="">Blog</a>
+		  </div>
+	</div>
+</div>
+<hr style="width:90%;height:1px;border-width:0;color:gray;background-color:gray">

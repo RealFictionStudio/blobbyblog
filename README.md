@@ -1,1 +1,3 @@
-# blobbyblog
+# BlobbyBlog
+
+My personal site

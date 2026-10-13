@@ -1,0 +1,29 @@
+.container {
+  padding-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  height: 2.5%;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+.subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica;
+}
+.header {
+  font-family: system-ui;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-item {
+  font-size: 1.5em;
+  margin-left: 10px;
+  margin-right: 10px;
+}

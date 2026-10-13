@@ -1,0 +1,22 @@
+---
+import MainBar from '../components/MainBar.astro';
+import '../styles/global.css';
+import '../styles/blog.css';
+import Post_Thumbnail from '../components/Post_Thumbnail.astro';
+---
+
+<html>
+	<head>
+		<title>Blobby Posts</title>
+	</head>
+	<body>
+		<MainBar />
+		<header>
+			<h1>Cool Articles</h1>
+		</header>
+		<div class="band">
+			<Post_Thumbnail ptitle="Bobry w ameryce" path="/posts/post-1" image="/src/assets/a_group_of_colorful_ghosts.png" tags="Linux" ptype="1"/>
+			<Post_Thumbnail ptitle="Bobry w ameryce" path="/posts/post-1" tags="Linux" ptype="2"/>
+		</div>
+	</body>
+</html>
