@@ -1,0 +1,38 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <head>
+    <style>
+      .post {
+        max-width: 720px;
+        margin: 0 auto;
+		border-style: solid;
+      }
+
+      .post-content {
+		  text-align: center;
+      }
+
+      .post-content :global(h1),
+      .post-content :global(h2),
+      .post-content :global(h3),
+      .post-content :global(p) {
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="post">
+      <h1>{frontmatter.title}</h1>
+      <h2>Post author: {frontmatter.author}</h2>
+      <p>{frontmatter.description}</p>
+
+      <article class="post-content">
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>

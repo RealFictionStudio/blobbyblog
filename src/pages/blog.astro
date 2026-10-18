@@ -5,6 +5,18 @@ import '../styles/global.css';
 import '../styles/blogPage.css'
 import BlogEntry from '../components/blog/blogEntry.astro';
 import BlogLogo from '../assets/blog_white.png';
+
+const posts = Object.entries(
+  import.meta.glob('../posts/*.md', { eager: true })
+)
+  .map(([path, post]) => ({
+    slug: path.split('/').pop().replace(/\.md$/, ''),
+    ...post,
+  }))
+  .sort(
+    (a, b) =>
+      Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+  );
 ---
 
 <html>
@@ -17,8 +29,15 @@ import BlogLogo from '../assets/blog_white.png';
 			<h1>Cool Articles</h1>
 		</header>
 			<div class="posts">
-				<BlogEntry ptitle="Bobry w ameryce" desc="" path="/posts/post-1" imagePath="/src/assets/a_group_of_colorful_ghosts.png" tags="Linux" ptype=1 />
-				<BlogEntry ptitle="Bobry w ameryce" desc='' path="/posts/post-1" imagePath="/src/assets/a_city_skyline_with_many_buildings.png" tags="Linux" ptype=1 />
+				{posts.map((post) => (
+				<BlogEntry 
+				ptitle={`${post.frontmatter.title}`}
+				desc={`${post.frontmatter.description}`}
+				path={`/blog/posts/${post.slug}/`}
+				imagePath={`/src/assets/${post.frontmatter.image}`}
+				tags={`${post.frontmatter.tags}`}
+				ptype=1 />
+				))}
 			</div>
 	</body>
 </html>
