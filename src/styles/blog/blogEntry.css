@@ -1,6 +1,10 @@
-.item-1 {
+.card {
   display: flex;
   width: 40%;
+}
+
+.item-1 {
+  display: flex;
   padding: 5px;
   justify-content: space-between;
   border-style: solid;
