@@ -1,35 +1,28 @@
 ---
 const { frontmatter } = Astro.props;
+import { Image } from 'astro:assets';
+import MainBarTiny from '../components/MainBarTiny.astro'
+import '../styles/blog/blogPost.css'
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,svg}');
+if (!images[`/src/assets/${frontmatter.image}`]) throw new Error(`"${frontmatter.image}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,svg}"`);
 ---
 
 <html>
   <head>
-    <style>
-      .post {
-        max-width: 720px;
-        margin: 0 auto;
-		border-style: solid;
-      }
-
-      .post-content {
-		  text-align: center;
-      }
-
-      .post-content :global(h1),
-      .post-content :global(h2),
-      .post-content :global(h3),
-      .post-content :global(p) {
-        text-align: left;
-      }
-    </style>
+	  <title>{frontmatter.title}</title>
   </head>
 
   <body>
+	<MainBarTiny />
     <main class="post">
-      <h1>{frontmatter.title}</h1>
-      <h2>Post author: {frontmatter.author}</h2>
-      <p>{frontmatter.description}</p>
-
+		<Image src={images[`/src/assets/${frontmatter.image}`]()} alt=`${frontmatter.title} image` style={{ width: '100%', height: '100%' }} />
+		<h1><strong>{frontmatter.title}</strong></h1>
+      <p class="description">{frontmatter.description}</p>
+	  <div class="details">
+		  <p>Post author: {frontmatter.author}</p>
+		  <p>{frontmatter.date}</p>
+	  </div>
       <article class="post-content">
         <slot />
       </article>
