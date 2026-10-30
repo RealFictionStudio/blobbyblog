@@ -25,9 +25,19 @@ const posts = Object.entries(
 	</head>
 	<body>
 		<MainBarTiny />
-		<header>
-			<h1><strong>Cool Articles</strong></h1>
-		</header>
+		<div class="categories">
+			<div class="cat">
+				<a href="">Blog</a>
+			</div>
+			<div class="cat">
+				<a href="">Writeups</a>
+			</div>
+			<div class="cat">
+				<a href="">Mentions</a>
+			</div>
+			
+		</div>
+
 			<div class="posts">
 				{posts.map((post) => (
 				<BlogEntry 

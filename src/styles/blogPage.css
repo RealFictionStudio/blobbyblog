@@ -1,3 +1,14 @@
+.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cat {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .posts {
   display: flex;
   flex-direction: column;
