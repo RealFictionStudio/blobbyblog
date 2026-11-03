@@ -7,6 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:swa": "swa start",
+    "dev:app": "npm run dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
