@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import '../styles/headerTiny.css';
 import BlogLogo from '../assets/blog_white2.png';
+import '../styles/headerTiny.css';
 ---
 
 <div class="container">
@@ -9,17 +9,21 @@ import BlogLogo from '../assets/blog_white2.png';
 		<a href="/"><Image src={BlogLogo} alt="BlobbyBlog logo" style="height: 120%; width: auto"/></a>
 	</div>
 	<div class="header">
-		  <div class="header-item">
-			  <a href="/about" target="">About</a>
-		  </div>
-		  <div class="header-item">
-			  <a href="/blog" target="">Blog</a>
-		  </div>
-		  <div class="header-item">
-		      <a href="https://github.com/RealFictionStudio" target="">Github</a>
-          </div>
+		<time class="date"></time>
+		<div class="subheader">
+			  <div class="header-item">
+				  <a href="/about" target="">About</a>
+			  </div>
+			  <div class="header-item">
+				  <a href="/blog" target="">Blog</a>
+			  </div>
+			  <div class="header-item">
+				  <a href="https://github.com/RealFictionStudio" target="">Github</a>
+			  </div>
+		</div>
 	</div>
 </div>
+<script src="../scripts/get-date.js"></script>
 <hr style="width:40%;min-width:400px;height:2px;border-width:0;color:gray;background-color:gray;margin-top:2%">
 <div class="categories">
 	<div class="cat">
