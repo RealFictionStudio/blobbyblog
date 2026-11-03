@@ -1,7 +1,7 @@
 ---
 export async function getStaticPaths() {
-const postModules = import.meta.glob('../../../posts/*.md', {
-    eager: true,
+  const postModules = import.meta.glob('../../posts/blog/*.md', {
+	eager: true,
   });
 
   return Object.entries(postModules).map(([path, post]) => {
