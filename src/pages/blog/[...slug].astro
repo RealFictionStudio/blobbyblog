@@ -1,4 +1,6 @@
 ---
+import '../../styles/global.css';
+
 export async function getStaticPaths() {
   const postModules = import.meta.glob('../../posts/blog/*.md', {
 	eager: true,

@@ -1,10 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import MainBarTiny from '../components/MainBarTiny.astro'
-import '../styles/global.css';
-import '../styles/blogPage.css'
 import BlogEntry from '../components/blog/blogEntry.astro';
 import BlogLogo from '../assets/blog_white.png';
+import '../styles/global.css';
 
 interface Props {
 	postType: string,
@@ -31,18 +30,7 @@ const posts = Object.entries(allPosts)
 	</head>
 	<body>
 		<MainBarTiny />
-		<div class="categories">
-			<div class="cat">
-				<a href="/blog">Blog</a>
-			</div>
-			<div class="cat">
-				<a href="/writeups">Writeups</a>
-			</div>
-			<div class="cat">
-				<a href="">Mentions</a>
-			</div>
-			
-		</div>
+		
 
 			<div class="posts">
 				{posts.map((post) => (

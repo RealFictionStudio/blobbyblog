@@ -1,12 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 import '../styles/headerTiny.css';
-import BlogLogo from '../assets/blog_white.png';
+import BlogLogo from '../assets/blog_white2.png';
 ---
 
 <div class="container">
 	<div class="title">
-		<a href="/"><Image src={BlogLogo} alt="BlobbyBlog logo" style="height: 100%; width: auto"/></a>
+		<a href="/"><Image src={BlogLogo} alt="BlobbyBlog logo" style="height: 120%; width: auto"/></a>
 	</div>
 	<div class="header">
 		  <div class="header-item">
@@ -20,4 +20,16 @@ import BlogLogo from '../assets/blog_white.png';
           </div>
 	</div>
 </div>
-<hr style="width:40%;height:2px;border-width:0;color:gray;background-color:gray;margin-top:2%">
+<hr style="width:40%;min-width:400px;height:2px;border-width:0;color:gray;background-color:gray;margin-top:2%">
+<div class="categories">
+	<div class="cat">
+		<a href="/blog">Blog</a>
+	</div>
+	<div class="cat">
+		<a href="/writeups">Writeups</a>
+	</div>
+	<div class="cat">
+		<a href="">Mentions</a>
+	</div>
+			
+</div>
