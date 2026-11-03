@@ -23,12 +23,11 @@
 }
 
 .thumb {
-  width: 50%;
-  height: 90%; /* set the maximum thumbnail height */
+  width: auto;
+  flex: 0 1 30%;
+  min-width: 0;
   margin-left: auto;
   margin-right: 1%;
-  margin-top: auto;
-  margin-bottom: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,6 +35,7 @@
 
 .thumb-image {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  aspect-ratio: 1/1;
+  min-width: 0;
+  overflow: hidden;
 }

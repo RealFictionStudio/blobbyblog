@@ -1,6 +1,6 @@
 .post {
   padding-top: 5%;
-  max-width: 45%;
+  max-width: 40%;
   margin: 0 auto;
 }
 
@@ -17,11 +17,9 @@
 .details {
   display: flex;
   flex-direction: row;
-}
-
-.details > p {
   font-size: 20px;
-  padding-right: 2%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .post-content {
@@ -32,4 +30,12 @@
 .post-content > p {
   width: 95%;
   margin: 0 auto;
+}
+
+.post-content pre.astro-code {
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
