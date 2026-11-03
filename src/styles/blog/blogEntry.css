@@ -22,6 +22,10 @@
   flex-direction: column;
 }
 
+.tags {
+  color: grey;
+}
+
 .thumb {
   width: auto;
   flex: 0 1 30%;

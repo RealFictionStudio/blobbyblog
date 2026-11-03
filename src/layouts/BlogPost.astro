@@ -21,7 +21,7 @@ if (!images[`/src/assets/${frontmatter.image}`]) throw new Error(`"${frontmatter
       <p class="description">{frontmatter.description}</p>
 	  <hr style="width:100%;height:1px;border-width:0;color:gray;background-color:gray;margin-top:2%">
 	  <div class="details">
-		  <p class="author">Post author: {frontmatter.author}</p>
+		  <p class="author">Author: {frontmatter.author}</p>
 		  <p class="date">
 			  {new Intl.DateTimeFormat('en-GB', {
 				year: 'numeric',
