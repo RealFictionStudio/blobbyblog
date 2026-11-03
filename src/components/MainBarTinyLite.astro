@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import '../styles/headerTinyLite.css';
+import BlogLogo from '../assets/blog_white2.png';
+---
+
+<div class="container">
+	<div class="title">
+		<a href="/"><Image src={BlogLogo} alt="BlobbyBlog logo" style="height: 120%; width: auto"/></a>
+	</div>
+	<div class="header">
+		  <div class="header-item">
+			  <a href="/about" target="">About</a>
+		  </div>
+		  <div class="header-item">
+			  <a href="/blog" target="">Blog</a>
+		  </div>
+		  <div class="header-item">
+		      <a href="https://github.com/RealFictionStudio" target="">Github</a>
+          </div>
+	</div>
+</div>
+<hr style="width:40%;min-width:400px;height:2px;border-width:0;color:gray;background-color:gray;margin-top:2%">
