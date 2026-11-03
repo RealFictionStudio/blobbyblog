@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import MainBarTiny from '../components/MainBarTiny.astro'
+import '../styles/global.css';
+import '../styles/blogPage.css'
+import BlogEntry from '../components/blog/blogEntry.astro';
+import BlogLogo from '../assets/blog_white.png';
+
+interface Props {
+	postType: string,
+}
+
+const { postType } = Astro.props;
+
+const allPosts = import.meta.glob(`../posts/**/*.md`, { eager: true })
+const posts = Object.entries(allPosts)
+  .filter(([path]) => path.startsWith(`../posts/${postType}/`))
+  .map(([path, post]) => ({
+    slug: path.split('/').pop()!.replace(/\.md$/, ''),
+    ...post,
+  }))
+  .sort(
+    (a, b) =>
+      Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+  );
+---
+
+<html>
+	<head>
+		<title>Blobby Posts</title>
+	</head>
+	<body>
+		<MainBarTiny />
+		<div class="categories">
+			<div class="cat">
+				<a href="/blog">Blog</a>
+			</div>
+			<div class="cat">
+				<a href="/writeups">Writeups</a>
+			</div>
+			<div class="cat">
+				<a href="">Mentions</a>
+			</div>
+			
+		</div>
+
+			<div class="posts">
+				{posts.map((post) => (
+				<BlogEntry 
+				ptitle={`${post.frontmatter.title}`}
+				desc={`${post.frontmatter.description}`}
+				path={`/${postType}/${post.slug}/`}
+				imagePath={`/src/assets/${post.frontmatter.thumb}`}
+				tags={`${post.frontmatter.tags}`}
+				ptype=1 />
+				))}
+			</div>
+	</body>
+</html>
