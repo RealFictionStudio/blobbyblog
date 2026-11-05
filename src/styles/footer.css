@@ -1,4 +1,31 @@
 footer {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   bottom: 0;
+  left: 22.5%;
+  width: 55%;
+  height: auto;
+}
+
+.foot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  justify-content: left;
+}
+
+.foot-items {
+  display: flex;
+  justify-content: right;
+}
+
+.foot-items a {
+  font-size: 1.2em;
+  text-align: center;
+  margin-left: 10%;
 }
