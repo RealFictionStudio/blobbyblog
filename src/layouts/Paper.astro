@@ -1,0 +1,22 @@
+---
+import '../styles/Paper.css';
+
+interface Props {
+  ptitle: string;
+  widthValue?: string;
+}
+
+const { ptitle, widthValue = '100%' } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{ptitle}</title>
+  </head>
+  <body>
+    <main class="page" style={`--page-width: ${widthValue}`}>
+      <slot />
+    </main>
+  </body>
+</html>
+

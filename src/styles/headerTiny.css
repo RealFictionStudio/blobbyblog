@@ -8,14 +8,14 @@
 .title {
   display: flex;
   height: 30px;
-  width: 40%;
+  width: 95%;
   margin: 0 auto;
   justify-content: left;
   padding-top: 5px;
 }
 .header {
   display: flex;
-  width: 40%;
+  width: 95%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -39,8 +39,8 @@
 }
 
 .cat {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .posts {
@@ -49,6 +49,7 @@
   align-items: center;
   gap: 5px;
   padding-top: 2%;
+  flex: 1;
 }
 
 a:visited {

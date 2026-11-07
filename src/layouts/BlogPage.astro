@@ -1,9 +1,12 @@
 ---
+import Paper from '../layouts/Paper.astro';
 import { Image } from 'astro:assets';
 import MainBarTiny from '../components/MainBarTiny.astro'
 import BlogEntry from '../components/blog/blogEntry.astro';
 import BlogLogo from '../assets/blog_white.png';
 import '../styles/global.css';
+
+import Footer from '../components/Footer.astro';
 
 interface Props {
 	postType: string,
@@ -29,19 +32,23 @@ const posts = Object.entries(allPosts)
 		<title>Blobby Posts</title>
 	</head>
 	<body>
-		<MainBarTiny />
-		
+		<Paper ptitle="Blobby Blog" widthValue="50%">
+			<MainBarTiny />
+			
 
-			<div class="posts">
-				{posts.map((post) => (
-				<BlogEntry 
-				ptitle={`${post.frontmatter.title}`}
-				desc={`${post.frontmatter.description}`}
-				path={`/${postType}/${post.slug}/`}
-				imagePath={`/src/assets/${post.frontmatter.thumb}`}
-				tags={`${post.frontmatter.tags}`}
-				ptype=1 />
-				))}
-			</div>
+				<div class="posts">
+					{posts.map((post) => (
+					<BlogEntry 
+					ptitle={`${post.frontmatter.title}`}
+					desc={`${post.frontmatter.description}`}
+					path={`/${postType}/${post.slug}/`}
+					imagePath={`/src/assets/${post.frontmatter.thumb}`}
+					tags={`${post.frontmatter.tags}`}
+					ptype=1 />
+					))}
+				</div>
+
+				<Footer/>
+		</Paper>
 	</body>
 </html>

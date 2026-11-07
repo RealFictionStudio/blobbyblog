@@ -7,14 +7,23 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--back);
+}
+
 header {
   width: 90%;
   max-width: 1240px;
   margin: 0 auto;
-}
-
-body {
-  background-color: var(--back);
 }
 
 a {
