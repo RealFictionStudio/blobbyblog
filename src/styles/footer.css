@@ -1,11 +1,12 @@
-footer {
+.footer {
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
-  position: absolute;
+  position: static;
   bottom: 0;
-  left: 22.5%;
-  width: 55%;
-  height: auto;
+  width: 100%;
+  align-self: center;
+  margin-top: auto;
 }
 
 .foot {
@@ -14,14 +15,19 @@ footer {
   justify-content: space-between;
 }
 
-.title {
+.foot-title {
   display: flex;
+  flex: 0 auto;
+  width: fit-content;
+  height: fit-content;
   justify-content: left;
+  margin-left: 2%;
 }
 
 .foot-items {
   display: flex;
   justify-content: right;
+  margin-right: 2%;
 }
 
 .foot-items a {
